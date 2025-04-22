@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Joke Generator Game</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f4f4;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    h1 {
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .joke-box {
+      background: #fff;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      padding: 20px;
+      max-width: 600px;
+      text-align: center;
+      font-size: 1.2rem;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 1rem;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    .footer {
+      position: absolute;
+      bottom: 10px;
+      font-size: 0.8rem;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>😂 Joke Generator Game</h1>
+  <div class="joke-box" id="jokeBox">
+    Click the button to hear a joke!
+  </div>
+  <button onclick="generateJoke()">Tell me a joke</button>
+
+  <div class="footer">Made with 😂 by You</div>
+
+  <script>
+    const jokes = [
+      "Why don’t skeletons fight each other? They don’t have the guts.",
+      "I told my wife she was drawing her eyebrows too high. She looked surprised.",
+      "Why don’t scientists trust atoms? Because they make up everything!",
+      "What do you call fake spaghetti? An impasta!",
+      "I'm reading a book on anti-gravity. It's impossible to put down!",
+      "Did you hear about the restaurant on the moon? Great food, no atmosphere.",
+      "Why did the scarecrow win an award? Because he was outstanding in his field!",
+      "What do you call a can opener that doesn’t work? A can’t opener!",
+      "Why was the math book sad? It had too many problems.",
+      "Parallel lines have so much in common… it’s a shame they’ll never meet."
+    ];
+
+    function generateJoke() {
+      const randomIndex = Math.floor(Math.random() * jokes.length);
+      document.getElementById('jokeBox').textContent = jokes[randomIndex];
+    }
+  </script>
+
+</body>
+</html>

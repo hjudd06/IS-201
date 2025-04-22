@@ -1,0 +1,22 @@
+
+.header{
+    height: 100px;
+    background-color: cadetblue;
+    color: black;
+    line-height: 100px;
+    text-align: center;
+}
+
+.mainbody{
+    width: 80%;
+    margin: 0 auto;
+    
+}
+
+.footer{
+    height: 50px;
+    background-color: cadetblue;
+    text-align: center;
+    line-height: 50 px;
+    
+}
